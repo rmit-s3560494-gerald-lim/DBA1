@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Mar 21 15:50:01 AEDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0162-46e4-78f8-00000770b868 
+on database directory /Users/gerald/eclipse-workspace/derbyLoad/db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f8e5cde 
+Loaded from file:/Users/gerald/eclipse-workspace/derbyLoad/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=9.0.4+11
+user.dir=/Users/gerald/eclipse-workspace/derbyLoad
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
