@@ -10,12 +10,11 @@ public class dbload {
         /*int pageSize = Integer.valueOf(args[1]);
         String fileName = args[2]; 
         String newFilename = "heap." + pageSize;*/
-
         // file for testing
         File file = new File("/Users/gerald/Google Drive/Database Systems/A1/P3/bncsv.txt");
-
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line;
+        // this skips the first line of the csv file
         br.readLine();
         ArrayList<Record> record = new ArrayList<Record>();
         
