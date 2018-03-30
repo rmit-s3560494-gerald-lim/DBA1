@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class dbload {
+public class dbloadL {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) throws FileNotFoundException 
+    {
 		String fileName = "/Users/gerald/Google Drive/Database Systems/A1/BUSINESS_NAMES_201803.csv";
 		File file = new File(fileName);
 		
