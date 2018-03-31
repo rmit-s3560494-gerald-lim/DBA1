@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 
 public class dbload 
@@ -43,6 +44,9 @@ public class dbload
         byte[] b_BN_STATE_NUM;
         byte[] b_BN_STATE_OF_REG;
         byte[] b_BN_ABN;
+        byte[] t_BN_STATE_NUM;
+        byte[] t_BN_STATE_OF_REG;
+        byte[] t_BN_ABN;
         try
         {
             //File file = new File("/Users/gerald/Google Drive/Database Systems/A1/P3/bncsv.txt");
@@ -55,6 +59,7 @@ public class dbload
             {
                 String[] value = line.split("\t");
                 BN_NAME = value[1];
+                
                 BN_STATUS = value[2];
                 BN_REG_DT = value[3];
                 BN_CANCEL_DT = value[4];
@@ -81,48 +86,59 @@ public class dbload
                 }
 
                 b_BN_NAME = BN_NAME.getBytes("UTF-8");
+                byte[] t_BN_NAME = Arrays.copyOf(b_BN_NAME, 200);
                 b_BN_STATUS = BN_STATUS.getBytes("UTF-8");
+                byte[] t_BN_STATUS = Arrays.copyOf(b_BN_STATUS, 12);
                 b_BN_REG_DT = BN_REG_DT.getBytes("UTF-8");
+                byte[] t_BN_REG_DT = Arrays.copyOf(b_BN_REG_DT, 10);
                 b_BN_CANCEL_DT = BN_CANCEL_DT.getBytes("UTF-8");
+                byte[] t_BN_CANCEL_DT = Arrays.copyOf(b_BN_CANCEL_DT, 10);
                 b_BN_RENEW_DT = BN_RENEW_DT.getBytes("UTF-8");
+                byte[] t_BN_RENEW_DT = Arrays.copyOf(b_BN_RENEW_DT, 10);
                 // set to null if it was previously null
                 try 
                 {
                     b_BN_STATE_NUM = BN_STATE_NUM.getBytes("UTF-8");
+                    t_BN_STATE_NUM = Arrays.copyOf(b_BN_STATE_NUM, 10);
                 } catch (NullPointerException i)
                 {
                     b_BN_STATE_NUM = null;
+                    t_BN_STATE_NUM = Arrays.copyOf(b_BN_STATE_NUM, 10);
                 }
                 try 
                 {
                     b_BN_STATE_OF_REG = BN_STATE_OF_REG.getBytes("UTF-8");
+                    t_BN_STATE_OF_REG = Arrays.copyOf(b_BN_STATE_OF_REG, 3);
                 } catch (NullPointerException i)
                 {
                     b_BN_STATE_OF_REG = null;
+                    t_BN_STATE_OF_REG = Arrays.copyOf(b_BN_STATE_OF_REG, 3);
                 }
                 try 
                 {
                     b_BN_ABN = BN_ABN.getBytes("UTF-8");
+                    t_BN_ABN = Arrays.copyOf(b_BN_ABN, 20);
                 } catch (NullPointerException i)
                 {
                     b_BN_ABN = null;
+                    t_BN_ABN = Arrays.copyOf(b_BN_ABN, 20);
                 }
                 // each os.write(44); is a comma    
-                os.write(b_BN_NAME);
+                os.write(t_BN_NAME);
                 os.write(44);
-                os.write(b_BN_STATUS);
+                os.write(t_BN_STATUS);
                 os.write(44);
-                os.write(b_BN_REG_DT);
+                os.write(t_BN_REG_DT);
                 os.write(44);
-                os.write(b_BN_CANCEL_DT);
+                os.write(t_BN_CANCEL_DT);
                 os.write(44);
-                os.write(b_BN_RENEW_DT);
+                os.write(t_BN_RENEW_DT);
                 os.write(44);
-                os.write(b_BN_STATE_NUM);
+                os.write(t_BN_STATE_NUM);
                 os.write(44);
-                os.write(b_BN_STATE_OF_REG);
+                os.write(t_BN_STATE_OF_REG);
                 os.write(44);
-                os.write(b_BN_ABN);
+                os.write(t_BN_ABN);
                 count++;
                 
                 if(count == recordSize)
