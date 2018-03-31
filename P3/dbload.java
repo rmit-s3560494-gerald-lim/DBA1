@@ -28,6 +28,8 @@ public class dbload
         //System.out.println(noRecords);
         int freeSpace = pageSize % recordSize;
         int count = 0;
+
+        // strings for attribute names
         String BN_NAME;
         String BN_STATUS;
         String BN_REG_DT;
@@ -44,9 +46,11 @@ public class dbload
         byte[] b_BN_STATE_NUM;
         byte[] b_BN_STATE_OF_REG;
         byte[] b_BN_ABN;
+        // temp byte arrays
         byte[] t_BN_STATE_NUM;
         byte[] t_BN_STATE_OF_REG;
         byte[] t_BN_ABN;
+        
         try
         {
             //File file = new File("/Users/gerald/Google Drive/Database Systems/A1/P3/bncsv.txt");
@@ -59,7 +63,6 @@ public class dbload
             {
                 String[] value = line.split("\t");
                 BN_NAME = value[1];
-                
                 BN_STATUS = value[2];
                 BN_REG_DT = value[3];
                 BN_CANCEL_DT = value[4];
@@ -123,6 +126,7 @@ public class dbload
                     b_BN_ABN = null;
                     t_BN_ABN = Arrays.copyOf(b_BN_ABN, 20);
                 }
+                
                 // each os.write(44); is a comma    
                 os.write(t_BN_NAME);
                 os.write(44);
