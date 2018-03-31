@@ -25,6 +25,7 @@ public class dbload
         int recordSize = 200 + 12 + 10 + 10 + 10 + 10 + 3 + 20; 
         int noRecords = pageSize / recordSize;
         //System.out.println(noRecords);
+        // remainder of space after allocating max records
         int freeSpace = pageSize % recordSize;
         int count = 0;
 
@@ -87,28 +88,44 @@ public class dbload
 
             b_BN_NAME = BN_NAME.getBytes("UTF-8");
             byte[] t_BN_NAME = Arrays.copyOf(b_BN_NAME, 200);
+            os.write(t_BN_NAME);
+            // each os.write(44); is writing a comma for later;
+            os.write(44);
             b_BN_STATUS = BN_STATUS.getBytes("UTF-8");
             byte[] t_BN_STATUS = Arrays.copyOf(b_BN_STATUS, 12);
+            os.write(t_BN_STATUS);
+            os.write(44);
             b_BN_REG_DT = BN_REG_DT.getBytes("UTF-8");
             byte[] t_BN_REG_DT = Arrays.copyOf(b_BN_REG_DT, 10);
+            os.write(t_BN_REG_DT);
+            os.write(44);
             b_BN_CANCEL_DT = BN_CANCEL_DT.getBytes("UTF-8");
             byte[] t_BN_CANCEL_DT = Arrays.copyOf(b_BN_CANCEL_DT, 10);
+            os.write(t_BN_CANCEL_DT);
+            os.write(44);
             b_BN_RENEW_DT = BN_RENEW_DT.getBytes("UTF-8");
             byte[] t_BN_RENEW_DT = Arrays.copyOf(b_BN_RENEW_DT, 10);
+            os.write(t_BN_RENEW_DT);
+            os.write(44);
             // set to null if it was previously null
             try 
             {
                 b_BN_STATE_NUM = BN_STATE_NUM.getBytes("UTF-8");
                 t_BN_STATE_NUM = Arrays.copyOf(b_BN_STATE_NUM, 10);
+                os.write(t_BN_STATE_NUM);
+                os.write(44);
             } catch (NullPointerException i)
             {
                 b_BN_STATE_NUM = null;
                 t_BN_STATE_NUM = Arrays.copyOf(b_BN_STATE_NUM, 10);
+
             }
             try 
             {
                 b_BN_STATE_OF_REG = BN_STATE_OF_REG.getBytes("UTF-8");
                 t_BN_STATE_OF_REG = Arrays.copyOf(b_BN_STATE_OF_REG, 3);
+                os.write(t_BN_STATE_OF_REG);
+                os.write(44);
             } catch (NullPointerException i)
             {
                 b_BN_STATE_OF_REG = null;
@@ -118,28 +135,12 @@ public class dbload
             {
                 b_BN_ABN = BN_ABN.getBytes("UTF-8");
                 t_BN_ABN = Arrays.copyOf(b_BN_ABN, 20);
+                os.write(t_BN_ABN);
             } catch (NullPointerException i)
             {
                 b_BN_ABN = null;
                 t_BN_ABN = Arrays.copyOf(b_BN_ABN, 20);
-            }
-            
-            // each os.write(44); is a comma    
-            os.write(t_BN_NAME);
-            os.write(44);
-            os.write(t_BN_STATUS);
-            os.write(44);
-            os.write(t_BN_REG_DT);
-            os.write(44);
-            os.write(t_BN_CANCEL_DT);
-            os.write(44);
-            os.write(t_BN_RENEW_DT);
-            os.write(44);
-            os.write(t_BN_STATE_NUM);
-            os.write(44);
-            os.write(t_BN_STATE_OF_REG);
-            os.write(44);
-            os.write(t_BN_ABN);
+            }  
             count++;
             
             if(count == recordSize)
