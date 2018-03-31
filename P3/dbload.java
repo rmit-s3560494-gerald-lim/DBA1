@@ -134,6 +134,8 @@ public class dbload
                     }
                 }
             }
+            br.close();
+            os.close();
             // end timing
             end = System.currentTimeMillis();
             System.out.println("Number of records: " + count);
