@@ -82,15 +82,18 @@ public class dbquery
                     System.out.println("BN_NAME: " + BN_NAME + "\nBN_STATUS: " + BN_STATUS + "\nBN_REG_DT: " + BN_REG_DT + "\nBN_CANCEL_DT: " + BN_CANCEL_DT + "\nBN_RENEW_DT: " + BN_RENEW_DT + "\nBN_STATE_NUM: " + BN_STATE_NUM + "\nBN_STATE_OF_REG: " + BN_STATE_OF_REG + "\nBN_ABN: " + BN_ABN);
                     
                 }
+                // next record
                 cRecord++;
                 if(cRecord == recordPerPage)
                 {
+                    // reset record to 0 and go to next page
                     cRecord = 0;
                     cPage++;
                 }
-
+                // find eof
                 if (Arrays.equals(b_BN_NAME, e))
                 {
+                    // stop searching
                     break;
                 }
             }
