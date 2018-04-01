@@ -1,0 +1,101 @@
+commit 4b96e276073446a8c581f2c78310e0162fbe7bfa
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 16:19:49 2018 +1000
+
+    added comments
+
+commit ef442fe90384a0207603e064b9893210b9d8a070
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 16:18:05 2018 +1000
+
+    fixed search, multiple search still broken
+
+commit c640aa6ef1c84e18415a9f48922d3bd3b99939d8
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 14:08:49 2018 +1000
+
+    started on dbquery, added most variables and read file
+
+commit 2db448e0458b35d52b0170e96ca9959631493c44
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 01:12:45 2018 +1100
+
+    b
+
+commit 06ce6fe19b6147be939b9292a09dde5491c6cdb3
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 01:06:42 2018 +1100
+
+    a
+
+commit 387b26912bff07d7e103fab9101a42abd0fa321d
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 01:05:28 2018 +1100
+
+    removed useless import
+
+commit 0561bf594b5df80103c5bebe6fb3cd53fc1b57a2
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 00:48:50 2018 +1100
+
+    added some comments and cleaned up code
+
+commit 93e5ca12d222bafca80b45c21868a8b3643dd583
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sun Apr 1 00:26:14 2018 +1100
+
+    fixed spacing in heap file
+
+commit 452ee6a1fd2a3455f88344857affbea81f57b8d6
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sat Mar 31 23:46:41 2018 +1100
+
+    cleaned up dbload and started dbquery
+
+commit 596d9a9c89823611be0b55962bc31eb78c3e1687
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sat Mar 31 23:42:17 2018 +1100
+
+    finished loading
+
+commit 883aa04fdd1fb0e74bc82e8e12f3d835e2df30e9
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Sat Mar 31 22:28:48 2018 +1100
+
+    restructured dbload, single class will be fine
+
+commit 54f37f700fbd099e7a083c7f016c2d107b5fb997
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Fri Mar 30 22:06:31 2018 +1100
+
+    Able to read the records into the ArrayList
+
+commit d69bbee5dc02eae637eb292be13f53815d59e5cd
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Fri Mar 30 22:04:54 2018 +1100
+
+    Restructured some files
+
+commit 4af3a784975a4f346e46886d97af1d322f7d346c
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Fri Mar 30 16:09:04 2018 +1100
+
+    started on dbload.java
+
+commit 3739ac9ec0ed5121f2c83b13386c3371a939f188
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Tue Mar 20 01:34:46 2018 +1100
+
+    bare parsing of csv into arrays, untested yet
+
+commit 3056a3c1532a8d74cd82ec5c24729db4e2409483
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Tue Mar 20 01:09:32 2018 +1100
+
+    Completed base derbyLoad without csv loading
+
+commit e6a100205b288385e74339cba45686d37f16c84c
+Author: Gerald Lim <s3560494@student.rmit.edu.au>
+Date:   Tue Mar 20 00:45:25 2018 +1100
+
+    First commit, loading into derby

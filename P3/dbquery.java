@@ -35,8 +35,8 @@ public class dbquery
             raf = new RandomAccessFile(newFilename, "r");
             while(true)
             {
-                int currOffset = cRecord * recordSize + cPage * pageSize;
-                raf.seek(currOffset);
+                int loc = cRecord * recordSize + cPage * pageSize;
+                raf.seek(loc);
                 byte[] b_BN_NAME = new byte[200];
                 raf.read(b_BN_NAME);
                 BN_NAME = new String(b_BN_NAME);
